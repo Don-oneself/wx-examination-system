@@ -1,0 +1,17 @@
+/* pages/indexTwo/indexTwo.wxss */
+
+page {
+  background-color: #fff;
+}
+
+.moreView {
+  margin: 0 20rpx 30rpx;
+}
+
+.moreView:first-child {
+  margin: 60rpx 20rpx 30rpx;
+}
+
+.moreImg {
+  width: 100%;
+}

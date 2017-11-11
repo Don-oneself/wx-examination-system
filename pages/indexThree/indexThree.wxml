@@ -1,0 +1,4 @@
+<!--index.wxml-->
+<view>
+  <image class="QRUrl" src="{{QRUrl}}" mode="{{mode}}"></image>
+</view>

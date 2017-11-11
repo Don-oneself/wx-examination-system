@@ -1,0 +1,79 @@
+<!--index.wxml-->
+<navigator url="../searchDetail/searchDetail">
+  <view class='searchTop'>
+    <input placeholder="搜索" disabled='disabled' />
+    <button type='default'>搜索</button>
+    <image class='imgIcon' src='../../image/searchIcon_03.jpg'></image>
+  </view>
+</navigator>
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <navigator url="../itemDetail/itemDetail?id={{item.id}}&img={{item.img}}&title={{item.title}}&sore={{item.sore}}&num={{item.num}}&info={{item.info}}">
+      <swiper-item>
+        <image src="{{item.img}}" class="slide-image" mode='center' />
+      </swiper-item>
+    </navigator>
+  </block>
+</swiper>
+<view class='hotSearch hotSearchTop'>
+  <view class='title'>分类</view>
+  <view class='content'>
+    <view wx:for="{{hot}}">
+      <view class='hotOne text-over {{item.bg}}' bindtap='changClassify'>{{item.hotText}}</view>
+    </view>
+    <view class='clear'></view>
+  </view>
+</view>
+<view class='hotSearch'>
+  <view class='title'>全部</view>
+  <view class='content'>
+    <block wx:if="{{noData}}">
+      <view wx:for="{{datas}}">
+        <navigator url="../itemDetail/itemDetail?id={{item.id}}&img={{item.img}}&title={{item.title}}&sore={{item.sore}}&num={{item.num}}&info={{item.info}}">
+          <view class='listAll'>
+            <view class='listImg'>
+              <image src='{{item.img}}' mode='widthFix'></image>
+            </view>
+            <view class='list'>
+              <view class='listTitle text-over'>{{item.title}}</view>
+              <view class='topInfo'>
+                <block wx:if="{{item.sore >= 5}}">
+                  <image src='../../image/star5.png'></image>
+                  <text>{{item.num}}万人在测</text>
+                </block>
+                <block wx:elif="{{item.sore >= 4 && item.sore < 5}}">
+                  <image src='../../image/star4.png'></image>
+                  <text>{{item.num}}万人在测</text>
+                </block>
+                <block wx:elif="{{item.sore >= 3 && item.sore < 4}}">
+                  <image src='../../image/star3.png'></image>
+                  <text>{{item.num}}万人在测</text>
+                </block>
+                <block wx:elif="{{item.sore >= 2 && item.sore < 3}}">
+                  <image src='../../image/star2.png'></image>
+                  <text>{{item.num}}万人在测</text>
+                </block>
+                <block wx:elif="{{item.sore >=  1&& item.sore < 2}}">
+                  <image src='../../image/star1.png'></image>
+                  <text>{{item.num}}万人在测</text>
+                </block>
+                <block wx:elif="{{item.sore >= 0 && item.sore < 1}}">
+                  <image src='../../image/star0.png'></image>
+                  <text>{{item.num}}万人在测</text>
+                </block>
+              </view>
+              <view class='listInfo text-over'>{{item.info}}</view>
+            </view>
+            <view class='listButton'>
+              <button type='default'>开始</button>
+            </view>
+            <view class='clear'></view>
+          </view>
+        </navigator>
+      </view>
+    </block>
+    <block wx:else>
+      <view class='noData'>暂无数据，请尝试搜索关键字。</view>
+    </block>
+  </view>
+</view>

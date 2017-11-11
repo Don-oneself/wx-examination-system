@@ -1,0 +1,52 @@
+<view class="detailAll">
+  <view class='title'>{{title}}</view>
+  <view class='topInfo'>
+    <block wx:if="{{sore >= 5}}">
+      <image src='../../image/star5.png'></image>
+      <text>{{num}}万人在测</text>
+    </block>
+    <block wx:elif="{{sore >= 4 && sore < 5}}">
+      <image src='../../image/star4.png'></image>
+      <text>{{num}}万人在测</text>
+    </block>
+    <block wx:elif="{{sore >= 3 && sore < 4}}">
+      <image src='../../image/star3.png'></image>
+      <text>{{num}}万人在测</text>
+    </block>
+    <block wx:elif="{{sore >= 2 && sore < 3}}">
+      <image src='../../image/star2.png'></image>
+      <text>{{num}}万人在测</text>
+    </block>
+    <block wx:elif="{{sore >=  1&& sore < 2}}">
+      <image src='../../image/star1.png'></image>
+      <text>{{num}}万人在测</text>
+    </block>
+    <block wx:elif="{{sore >= 0 && sore < 1}}">
+      <image src='../../image/star0.png'></image>
+      <text>{{num}}万人在测</text>
+    </block>
+  </view>
+  <view class='detailImg'>
+    <image src='{{img}}' mode='widthFix'></image>
+  </view>
+  <view class='detailInfo'>{{info}}</view>
+  <view class='detailButton'>
+    <navigator url="../test/test?id={{id}}&img={{img}}&title={{title}}&sore={{sore}}&num={{num}}&info={{info}}">
+      <button type='primary' size='default'>点击开始</button>
+    </navigator>
+  </view>
+  <view class='adv'>
+  <image src='../../image/adv.jpg' mode='widthFix'></image>
+  </view>
+  <view class='detailMore'>
+    <view class='detailTitle'>
+      ↓ 更多好玩测试 ↓
+      <view class='change' bindtap='changeGroup'>[ 换一组 ]</view>
+    </view>
+    <block wx:for="{{dates}}">
+      <view class='detailMoreOne text-over' data-id='{{item.id}}' data-img='{{item.img}}' data-title='{{item.title}}' data-sore='{{item.sore}}' data-num='{{item.num}}' data-info='{{item.info}}' bindtap='changePage'>
+        {{item.title}}
+      </view>
+    </block>
+  </view>
+</view>

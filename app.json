@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/indexTwo/indexTwo",
+    "pages/indexThree/indexThree",
+    "pages/searchDetail/searchDetail",
+    "pages/itemDetail/itemDetail",
+    "pages/test/test",
+    "pages/testResource/testResource"
+  ],
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "#ed736f",
+    "borderStyle": "white",
+    "backgroundColor": "#fafafa",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "image/bar1.png",
+        "selectedIconPath": "image/bar1r.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/indexTwo/indexTwo",
+        "iconPath": "image/bar2.png",
+        "selectedIconPath": "image/bar2r.png",
+        "text": "更多好玩"
+      },
+      {
+        "pagePath": "pages/indexThree/indexThree",
+        "iconPath": "image/bar3.png",
+        "selectedIconPath": "image/bar3r.png",
+        "text": "关于"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ed736f",
+    "navigationBarTitleText": "实用心理测试大全",
+    "navigationBarTextStyle": "white"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

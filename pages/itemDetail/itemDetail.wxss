@@ -1,0 +1,72 @@
+page {
+  background-color: #fff;
+}
+
+.detailAll {
+  padding: 30rpx;
+}
+
+.title {
+  font-size: 36rpx;
+  color: #333;
+  line-height: 60rpx;
+  font-weight: 500;
+}
+
+.detailImg {
+  margin-top: 10rpx;
+  width: 80%;
+  margin-left: 10%;
+}
+
+.detailImg image {
+  width: 100%;
+}
+
+.detailInfo {
+  font-size: 24rpx;
+  line-height: 32rpx;
+  color: #797979;
+}
+
+.detailButton {
+  margin-top: 20rpx;
+  margin-bottom: 40rpx;
+}
+
+.detailMore {
+  border: 1px solid #ddd;
+}
+
+.detailTitle {
+  font-size: 26rpx;
+  line-height: 50rpx;
+  color: #5e5e5e;
+  text-align: center;
+  position: relative;
+  background-color: #eee;
+  border-bottom: 1px solid #ddd;
+}
+
+.change {
+  position: absolute;
+  font-size: 26rpx;
+  line-height: 50rpx;
+  right: 20rpx;
+  top: 0;
+  color: #e84035;
+}
+
+.detailMoreOne {
+  box-sizing: border-box;
+  padding-left: 20rpx;
+  font-size: 26rpx;
+  line-height: 50rpx;
+  color: #5e5e5e;
+  background-color: #fff;
+  border-bottom: 1px dashed #ddd;
+}
+
+.detailMoreOne:last-child {
+  border-bottom: 0;
+}

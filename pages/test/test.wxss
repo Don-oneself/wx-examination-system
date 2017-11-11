@@ -1,0 +1,53 @@
+/* pages/test/test.wxss */
+
+page {
+  background-color: #fff;
+}
+
+.test {
+  padding: 30rpx;
+}
+
+.title {
+  font-size: 36rpx;
+  color: #333;
+  line-height: 60rpx;
+  font-weight: 500;
+}
+
+.subTitle {
+  font-size: 26rpx;
+  color: #797979;
+  line-height: 36rpx;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+}
+
+.subTitleImg {
+  text-align: center;
+}
+
+.subTitleImg image {
+  max-width: 100%;
+}
+
+.subOptions {
+  font-size: 30rpx;
+  line-height: 60rpx;
+  border: 1px solid #ddd;
+  border-top: 0;
+  padding-left: 30rpx;
+  color: #5e5e5e;
+}
+
+.subOptionsAll .subOptions:last-child {
+  border-bottom: 1px solid #ddd;
+}
+
+.subOptionsAll .subOptions:first-child {
+  border-top: 1px solid #ddd;
+}
+
+.subTitleImg {
+  margin-bottom: 30rpx;
+}

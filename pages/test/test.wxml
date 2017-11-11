@@ -1,0 +1,56 @@
+<!--pages/test/test.wxml-->
+<view class='test'>
+  <view class='title'>{{title}}</view>
+  <view class='topInfo'>
+    <block wx:if="{{sore >= 5}}">
+      <image src='../../image/star5.png'></image>
+      <text>{{num}}万人在测</text>
+    </block>
+    <block wx:elif="{{sore >= 4 && sore < 5}}">
+      <image src='../../image/star4.png'></image>
+      <text>{{num}}万人在测</text>
+    </block>
+    <block wx:elif="{{sore >= 3 && sore < 4}}">
+      <image src='../../image/star3.png'></image>
+      <text>{{num}}万人在测</text>
+    </block>
+    <block wx:elif="{{sore >= 2 && sore < 3}}">
+      <image src='../../image/star2.png'></image>
+      <text>{{num}}万人在测</text>
+    </block>
+    <block wx:elif="{{sore >=  1&& sore < 2}}">
+      <image src='../../image/star1.png'></image>
+      <text>{{num}}万人在测</text>
+    </block>
+    <block wx:elif="{{sore >= 0 && sore < 1}}">
+      <image src='../../image/star0.png'></image>
+      <text>{{num}}万人在测</text>
+    </block>
+  </view>
+  <block wx:if="{{titleType == 1}}">
+    <view class='sbuOne'>
+      <view class='subTitle'>{{numOption}}/{{total}} ：{{titleOption}}</view>
+      <view class='subOptionsAll'>
+        <block wx:for="{{options}}" wx:for-item="option" wx:for-index="optionIndex">
+          <view class='subOptions' data-numOption="{{numOption}}" data-total="{{total}}" optionTpe="{{titleType}}" bindtap='answer'>{{option.title}}</view>
+        </block>
+      </view>
+    </view>
+  </block>
+   <block wx:else>
+    <view class='sbuOne'>
+      <view class='subTitle'>{{numOption}}/{{total}} ：{{titleOption}}</view>
+      <view class='subTitleImg'>
+        <image src='{{imgOption}}' mode='widthFix'></image>
+      </view>
+      <view class='subOptionsAll'>
+        <block wx:for="{{options}}" wx:for-item="option" wx:for-index="optionIndex">
+          <view class='subOptions' data-numoption="{{numOption}}" data-total="{{total}}" bindtap='answer'>{{option.title}}</view>
+        </block>
+      </view>
+    </view>
+  </block> 
+  <view class='adv'>
+    <image src='../../image/adv.jpg' mode='widthFix'></image>
+  </view>
+</view>

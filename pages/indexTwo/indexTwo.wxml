@@ -1,0 +1,4 @@
+<!--index.wxml-->
+<view class='moreView' wx:for="{{imgArray}}">
+  <image class="moreImg" src="{{item.imgUrl}}" mode="{{mode}}" bindtap='toMiniProgram'></image>
+</view>

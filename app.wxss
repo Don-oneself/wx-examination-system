@@ -1,0 +1,65 @@
+/**app.wxss**/
+
+page {
+  background-color: #efeff4;
+}
+
+.text-over {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.clear {
+  clear: both;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.flex-1 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.noData {
+  font-size: 26rpx;
+  line-height: 36rpx;
+  text-align: center;
+  color: #9b9b9b;
+}
+
+/* 星星 */
+
+.topInfo {
+  margin-top: 5rpx;
+}
+
+.topInfo image {
+  width: 126rpx;
+  height: 26rpx;
+}
+
+.topInfo text {
+  font-size: 22rpx;
+  line-height: 26rpx;
+  color: #797979;
+  padding-left: 10rpx;
+}
+
+.listAll .topInfo {
+  margin-top: 0;
+}
+
+.adv{
+  margin-top: 30rpx;
+  margin-bottom: 30rpx; 
+}
+
+.adv image{
+  width: 100%;
+}

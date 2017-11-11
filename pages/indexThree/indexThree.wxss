@@ -1,0 +1,9 @@
+/* pages/indexThree/indexThree.wxss */
+
+page {
+  background-color: #fff;
+}
+
+.QRUrl {
+  width: 100%;
+}
